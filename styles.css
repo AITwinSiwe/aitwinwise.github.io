@@ -336,7 +336,7 @@ h1 span {
   flex-shrink: 0;
 }
 .local-ai .text-link img,
-.teaching .text-link img,
+.product .text-link img,
 .contact .text-link img {
   filter: invert(91%) sepia(21%) saturate(1181%) hue-rotate(130deg)
     brightness(102%);
@@ -372,7 +372,8 @@ h1 span {
 }
 .product {
   padding: 26px 24px 16px;
-  background: #eef5f7;
+  background: var(--navy);
+  color: white;
   min-width: 0;
 }
 .product-top {
@@ -387,18 +388,19 @@ h1 span {
   letter-spacing: -0.5px;
 }
 .product .eyebrow {
+  color: var(--cyan);
   font-size: 9px;
   letter-spacing: 1.5px;
 }
 .product .text-link {
-  color: #1c6579;
+  color: var(--cyan);
   border-bottom: 1px solid #448999;
   padding-bottom: 7px;
   flex-shrink: 0;
 }
 .product-description {
   font-size: 14px;
-  color: #526a7c;
+  color: #cad9e0;
   margin: 13px 0 20px;
 }
 .product-image {
@@ -407,8 +409,8 @@ h1 span {
   height: 265px;
   overflow: hidden;
   padding: 0;
-  background: #fff;
-  border: 1px solid #c5e3e9;
+  background: #071725;
+  border: 1px solid #234657;
   transition: box-shadow 0.2s;
 }
 .product-image:hover {
@@ -424,7 +426,7 @@ h1 span {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  color: #5c7585;
+  color: #9abcc8;
   font-size: 10px;
   margin-top: 12px;
   align-items: center;
@@ -755,8 +757,8 @@ dialog {
   border: 0;
   border-radius: 10px;
   padding: 32px;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--navy);
+  color: #f4f8fb;
   box-shadow: 0 20px 90px #0006;
 }
 dialog::backdrop {
@@ -773,22 +775,25 @@ dialog::backdrop {
   font-size: 30px;
   margin-top: 10px;
 }
+.dialog-heading .eyebrow {
+  color: var(--cyan);
+}
 .dialog-close {
-  border: 1px solid #b3c6d1;
-  background: white;
-  color: var(--ink);
+  border: 1px solid #456675;
+  background: #123040;
+  color: #f4f8fb;
   padding: 10px 17px;
   border-radius: 25px;
   font-size: 13px;
 }
 .dialog-intro {
   font-size: 15px;
-  color: var(--muted);
+  color: #c3d5df;
   margin: 18px 0;
 }
 .dialog-features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin: 26px 0;
 }
@@ -798,23 +803,23 @@ dialog::backdrop {
 }
 .dialog-features p {
   font-size: 13px;
-  color: var(--muted);
+  color: #c3d5df;
 }
 .dialog-figure {
   margin: 0;
   padding: 12px;
-  background: #e4edf1;
+  background: var(--navy);
 }
 .dialog-figure img {
   width: 100%;
   height: auto;
-  max-height: 510px;
+  max-height: none;
   object-fit: contain;
   object-position: top;
 }
 .dialog-figure figcaption {
   font-size: 11px;
-  color: #456371;
+  color: #bdd3df;
   margin-top: 12px;
 }
 .dialog-bottom {
@@ -826,7 +831,7 @@ dialog::backdrop {
 }
 .dialog-bottom p {
   font-size: 12px;
-  color: var(--muted);
+  color: #c3d5df;
   max-width: 570px;
 }
 .dialog-bottom .button {
@@ -1251,7 +1256,7 @@ body.dialog-open {
     padding: 8px;
   }
   .dialog-figure img {
-    max-height: 400px;
+    max-height: none;
   }
   .dialog-bottom {
     flex-direction: column;
@@ -1297,10 +1302,11 @@ body.dialog-open {
 }
 .product-image {
   height: auto;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1 / 1;
 }
 .product-image img {
   object-fit: contain;
+  object-position: center;
 }
 .feature .text-link {
   border-bottom: 1px solid currentColor;
@@ -1319,6 +1325,55 @@ body.dialog-open {
   }
   .local-ai .service-subtitle {
     font-size: 15px !important;
+  }
+}
+.concept-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  background: #0a1d2a;
+}
+.local-visual,
+.technology-visual {
+  margin: 30px 0 0;
+}
+.local-visual .concept-image {
+  aspect-ratio: 2.3 / 1;
+  object-position: center 45%;
+}
+.local-visual figcaption,
+.technology-visual figcaption {
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #65808f;
+}
+.technology-visual .concept-image {
+  aspect-ratio: 3.2 / 1;
+}
+.technology-visual figcaption {
+  color: #9bbcc9;
+}
+.industry-title .concept-image {
+  margin-top: 24px;
+  aspect-ratio: 16 / 9;
+}
+.exploration-grid > article > .concept-image {
+  aspect-ratio: 16 / 10;
+  margin-bottom: 23px;
+}
+.exploration-grid > article {
+  padding-top: 0;
+  border-top: 0;
+}
+@media (max-width: 800px) {
+  .technology-visual .concept-image {
+    aspect-ratio: 2 / 1;
+  }
+  .local-visual {
+    max-width: 540px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

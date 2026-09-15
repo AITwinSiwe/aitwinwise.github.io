@@ -47,13 +47,14 @@ const products = {
         "连接文献阅读、批注与知识关联，支持从知识回到原始资料。",
       ],
       [
-        "科研工作流",
+        "工具与工作流",
         "结合 AI 助手、文档协作和科学计算工具，辅助整理、分析与报告工作。",
       ],
+      ["成果与报告", "整理研究过程与项目资料，辅助生成图表与报告。"],
     ],
-    image: "assets/research-workspace.webp",
-    alt: "科研协作演示中的项目总览与协作角色",
-    caption: "科研协作演示界面（局部）；项目、角色与数量为演示数据。",
+    image: "assets/research-map-3d.webp",
+    alt: "科研智能体功能图：机器人 Agent 连接项目与团队、文献与知识、工具与工作流、成果与报告",
+    caption: "功能概念示意，非实际软件界面。点击配图可在新标签页查看高清原图。",
     note: "可交流课题组使用场景、产品演示与部署方案。具体接入模块与交付范围按需求确定。",
   },
   teaching: {
@@ -63,22 +64,14 @@ const products = {
     intro:
       "从教师的真实需求出发，连接课前准备、课堂讲授、实践训练与学习反馈，让专业知识进入可互动的教学过程。",
     features: [
-      [
-        "备课与课堂",
-        "支持课件逐页审核、授课展示与课程资料组织，辅助教师开展教学。",
-      ],
-      [
-        "知识图谱",
-        "呈现课程知识点与关联关系，支持围绕具体概念展开探索与学习。",
-      ],
-      [
-        "实践与反馈",
-        "连接代码示例、在线编程、报告与作业反馈；AI 建议和初评供师生参考。",
-      ],
+      ["管理员", "课程与用户管理、内容审核发布、系统配置维护。"],
+      ["教师", "课件与作业管理、课堂讲稿生成、批改与教学反馈。"],
+      ["助教", "协助课件与作业管理、作业批改与答疑、上传检查与支持。"],
+      ["学生", "课件学习与预习、在线编程与提交、AI 问答与学习反馈。"],
     ],
-    image: "assets/teaching-graph.webp",
-    alt: "课程知识图谱中的气溶胶及其关联概念",
-    caption: "真实课程知识图谱示例：气溶胶及关联知识点。",
+    image: "assets/teaching-map-3d.webp",
+    alt: "智慧教学平台功能图：统一登录后按管理员、教师、助教和学生身份进入相应功能",
+    caption: "功能概念示意，非实际软件界面。点击配图可在新标签页查看高清原图。",
     note: "教师保留内容审核与正式评分的决定权。可交流课程接入、教学演示与部署方案。",
   },
 };
@@ -99,6 +92,7 @@ document.querySelectorAll("[data-product]").forEach((button) => {
     const picture = document.querySelector("#dialog-image");
     picture.src = product.image;
     picture.alt = product.alt;
+    document.querySelector("#dialog-original").href = product.image;
     const features = document.querySelector("#dialog-features");
     features.replaceChildren();
     product.features.forEach(([title, description]) => {
