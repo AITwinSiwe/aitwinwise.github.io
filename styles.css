@@ -1387,3 +1387,48 @@ body.dialog-open {
     animation: none !important;
   }
 }
+
+/* Direct contact channels */
+.contact-qr {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 28px 0 0;
+}
+.contact-qr a {
+  display: block;
+  flex: 0 0 192px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.contact-qr img {
+  display: block;
+  width: 192px;
+  height: 192px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.contact-qr figcaption {
+  flex: 1 1 140px;
+  color: #c0d3dc;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.contact-qr strong,
+.contact-qr span {
+  display: block;
+}
+.contact-qr strong {
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+.contact-email-direct {
+  display: inline-block;
+  margin-top: 18px;
+  color: #6de7ec;
+  font-size: clamp(18px, 2vw, 24px);
+  overflow-wrap: anywhere;
+}
