@@ -29,7 +29,7 @@ Font preparation briefly lacked its build-time dependency; resolved locally and 
 - 320, 390, 768, 1024, 1435 and 1920 px viewport widths: no horizontal overflow.
 - All internal navigation targets exist; mobile menu opens/closes, navigation selection closes it.
 - Product details open; Escape and close button dismiss; focus returns to trigger. Product CTA selects the relevant inquiry topic.
-- Inquiry summary generated locally. User text remains literal, not HTML. Clipboard content matches with Windows line-ending normalization; return-to-edit works. GitHub draft URL uses the correct repository and encoded content. No message submitted.
+- Inquiry summary generated locally. User text remains literal, not HTML. Clipboard content matches with Windows line-ending normalization; return-to-edit works. Mail draft uses the business email and encoded subject/body. No message sent.
 - Images loaded; no browser console errors or failed requests. Evidence: `../company-site-design/browser-verification.json`.
 
 ## Accepted differences and practical limits
@@ -37,7 +37,7 @@ Font preparation briefly lacked its build-time dependency; resolved locally and 
 - Decorative search icon replaced with a functional cooperation link because the site has no search capability.
 - Hero landscape is a separately generated illustration of the same direction, not pixel-identical terrain.
 - Additional sections follow the selected first screen and the user's later content requirements.
-- GitHub is the currently available public inquiry channel. Business email and a production product-login entry were not provided.
+- Contact uses blueingel@hotmail.com and the owner-supplied QR code; no product-login entry is exposed.
 - Browser validation used Chromium on Windows; Safari and Firefox were not tested. This is not a comprehensive accessibility certification.
 
 ## Implementation checklist
@@ -61,3 +61,6 @@ Fresh verification: `../.investment-build/verify-company-concepts.cjs` passed af
 Local preview initially served top-level WebP navigation as application/octet-stream due to the Windows MIME registry, causing a download instead of an image tab. The local preview handler now explicitly serves image/webp, and the original-image link test passes. No production backend or hosting configuration was changed.
 
 Inspected the new desktop and mobile product, industry, and application sections, plus the generated full-size assets. Supplemental screenshots and verification JSON are in `../company-site-design/concept-update/`. No new actionable layout or content findings remain. This update is saved to the existing draft PR; no live deployment is implied.
+
+## Contact update — 2026-09-18
+Visitor-facing repository links and instructions removed. Email drafts use blueingel@hotmail.com with encoded subject and summary. Original owner-supplied QR PNG is linked for full-size viewing. Contact checks passed at 320, 390, 768 and 1435 px, and existing interaction regression passed. No email was sent.

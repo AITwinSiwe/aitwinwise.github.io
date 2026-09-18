@@ -21,3 +21,5 @@
 未将原始行业平台截图、内部地址、学生历史作业信息或带品牌的完整产品截图放入公开站点。
 
 2026-09-15 配图更新使用内置 `image_gen`，原图保存在本地工作区 `../company-site-design/concept-update/`。两张智能体横幅的初始提示词见该目录的 `realistic-wide-prompts.json`，机器人差异化编辑的最终提示词见 `distinct-robot-prompts.json`；其他配图记录见 `prompts.json`。网页使用优化后的 WebP，并延迟加载下方插图。产品展示采用写实机器人、工作场景和细连接线，深蓝与青色光线呼应全站视觉，机器人分别采用深色金属与白色外壳；功能说明另以原生 HTML 提供。生成的人物、实验室和设备均为概念视觉，不代表真实团队、实际产品硬件或自有场地。
+
+联系二维码 `assets/contact-qr.png` 由用户提供并授权用于网站联系入口，原始 PNG 未重绘或压缩。 / Contact QR code supplied by the site owner; original PNG preserved.

@@ -154,12 +154,9 @@ form.addEventListener("submit", (event) => {
   }
   const summary = `关注方向：${interest.value}\n\n希望解决的问题：\n${scenario.value.trim()}\n\n希望进一步交流产品演示、技术方案与合作方式。`;
   document.querySelector("#inquiry-summary").value = summary;
-  const url = new URL(
-    "https://github.com/AITwinWise/aitwinwise.github.io/issues/new",
-  );
-  url.searchParams.set("title", `合作交流：${interest.value}`);
-  url.searchParams.set("body", summary);
-  document.querySelector("#github-inquiry").href = url.href;
+  const subject = encodeURIComponent(`合作交流：${interest.value}`);
+  document.querySelector("#email-inquiry").href =
+    `mailto:blueingel@hotmail.com?subject=${subject}&body=${encodeURIComponent(summary)}`;
   form.hidden = true;
   result.hidden = false;
   document.querySelector("#copy-status").textContent = "摘要已生成，尚未发送。";
